@@ -1,0 +1,109 @@
+.customer-home {
+  width: 100rem;
+  padding: 3rem 6vw;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff8f9;
+  min-height: 100vh;
+}
+
+/* Header section with filter bar */
+.customer-home h2 {
+  font-size: 2.5rem;
+  color: #ff4d6d;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Filter bar layout */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  background-color: #fff0f3;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #ffe0e8;
+  box-shadow: 0 4px 10px rgba(255, 77, 109, 0.05);
+}
+
+/* Input and Select */
+.filter-bar input,
+.filter-bar select {
+  padding: 0.9rem 1.2rem;
+  border: 1px solid #ffcbd5;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 280px;
+  background-color: #fff1f4;
+  transition: all 0.3s ease;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+  outline: none;
+  border-color: #ff4d6d;
+  background-color: #fff9fa;
+  box-shadow: 0 0 6px rgba(255, 77, 109, 0.2);
+}
+
+/* Services Grid */
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Each service card */
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #ffe0e8;
+  border-radius: 14px;
+  padding: 1.8rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(255, 77, 109, 0.1);
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  color: #999;
+  font-size: 1.4rem;
+  margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .customer-home h2 {
+    flex-direction: column;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .filter-bar input,
+  .filter-bar select {
+    width: 100%;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,128 @@
+/* ConsultantServices.css */
+
+.consultant-services-container {
+  max-width: 1200px;
+  min-width: 1200px;
+  margin-top: 2px;
+  margin: 70px auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 2px;
+  
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-row h2 {
+  font-size: 3rem;
+  color: #1e1e1e;
+  display: flex;
+  align-items: center;
+}
+
+.add-service-btn {
+  background-color: #ff4b7d;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-service-btn:hover {
+  background-color: #e53e6d;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #ffe1ea;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+.service-card h3 {
+  color: #0d6efd;
+  margin-bottom: 0.8rem;
+}
+
+.service-card p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.service-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.edit-btn,
+.delete-btn,
+.add-availability-btn {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.add-availability-btn {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.add-availability-btn:hover {
+  background-color: #004bb5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .add-service-btn {
+    align-self: flex-start;
+  }
+}

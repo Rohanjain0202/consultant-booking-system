@@ -1,0 +1,195 @@
+.consultantdashboard {
+  display: flex;
+  flex-direction:column;
+  max-width: 1500px;
+  height: 900px;
+  margin-top: 150px;
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff4f6;
+}
+
+.dashboard-header {
+  width:100rem;
+  height:10rem;
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.dashboard-header span {
+  color: #4caf50;
+}
+
+.dashboard-header .sub {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* STAT BOXES */
+.dashboard-stats-wrapper {
+
+  width:90rem;
+  height:10rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-stats {
+  
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 200px;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.stat-card p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.total {
+  border-left: 5px solid #2196f3;
+}
+.upcoming {
+  border-left: 5px solid #ff9800;
+}
+.completed {
+  border-left: 5px solid #4caf50;
+}
+
+/* BOOKINGS SECTION */
+.dashboard-next {
+  width:90rem;
+  height:10rem;
+  margin-top: 2rem;
+}
+
+.next-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.next-header h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.view-all-btn {
+  background-color: #1976d2;
+  color: white;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.view-all-btn:hover {
+  background-color: #115293;
+}
+
+.no-booking {
+  text-align: center;
+  color: #888;
+  padding: 1rem;
+}
+
+/* Booking Cards */
+.booking-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.booking-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+.booking-card p {
+  margin: 0.4rem 0;
+  color: #333;
+}
+
+.badge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.badge.booked {
+  background-color: #ffeb3b;
+  color: #000;
+}
+.badge.completed {
+  background-color: #4caf50;
+  color: white;
+}
+.badge.cancelled {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-group {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.complete-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 0.4rem;
+  margin: 0 0.3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.complete-btn {
+  background-color: #4caf50;
+}
+.complete-btn:hover {
+  background-color: #388e3c;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+}
+.cancel-btn:hover {
+  background-color: #d32f2f;
+}

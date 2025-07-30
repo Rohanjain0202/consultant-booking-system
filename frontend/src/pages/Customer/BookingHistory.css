@@ -1,0 +1,185 @@
+/* Reset basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #fff4f7;
+}
+
+/* Container for the whole page */
+.booking-history-container {
+  width: 1600px;
+  margin-top: 100px;
+  padding: 4rem 6%;
+  min-height: 100vh;
+  background-color: #fff4f7;
+}
+
+/* Heading */
+.booking-history-container h2 {
+  font-size: 2.4rem;
+  color: #ff5c70;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+/* Booking card grid layout */
+.booking-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Individual booking card */
+.booking-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.2s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+}
+
+.booking-card p {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 0.6rem 0;
+  line-height: 1.6;
+}
+
+.booking-card strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Status styling */
+.status {
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+/* Status Colors */
+.status.booked {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.status.completed {
+  background-color: #d9edf7;
+  color: #31708f;
+}
+
+.status.cancelled {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .booking-card {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+
+.review-btn {
+  background-color: #ff5c70;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.review-btn:hover {
+  background-color: #e04b5d;
+}
+
+.reviewed-label {
+  margin-top: 1rem;
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Review Modal */
+.review-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.review-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.review-form h3 {
+  margin-bottom: 1rem;
+  color: #ff5c70;
+}
+
+.review-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.review-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-buttons button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.review-buttons button:first-child {
+  background-color: #28a745;
+  color: white;
+}
+
+.review-buttons button:last-child {
+  background-color: #ccc;
+  color: black;
+}

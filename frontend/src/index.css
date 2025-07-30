@@ -1,0 +1,105 @@
+/* ========== RESET & BASE STYLES ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #ffe0e5, #fce8d5); /* Soft peach-pink */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.4s ease;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ========== AUTH FORM CONTAINER ========== */
+.auth-container {
+  background-color: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 420px;
+  transition: transform 0.3s ease;
+}
+
+.auth-container:hover {
+  transform: translateY(-5px);
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+/* ========== FORM ELEMENTS ========== */
+.auth-container input,
+.auth-container select,
+.auth-container button {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-top: 0.9rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.auth-container input,
+.auth-container select {
+  border: 1px solid #ccc;
+  background-color: #fefefe;
+}
+
+.auth-container input:focus,
+.auth-container select:focus {
+  border-color: #ff9a9e;
+  outline: none;
+  background-color: #fffdfd;
+}
+
+/* ========== BUTTON STYLES ========== */
+.auth-container button {
+  background-color: #ff7b89;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+}
+
+.auth-container button:hover {
+  background-color: #ff5c70;
+}
+
+/* ========== RESPONSIVENESS ========== */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 2rem;
+    border-radius: 12px;
+  }
+
+  .auth-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .auth-container input,
+  .auth-container select,
+  .auth-container button {
+    font-size: 0.95rem;
+    padding: 0.7rem 0.9rem;
+  }
+}

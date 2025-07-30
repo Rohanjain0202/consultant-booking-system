@@ -1,0 +1,197 @@
+.profile-dashboard {
+  display: flex;
+  margin-top: 50px;
+  width: 1600px;
+  height: 100vh;
+  background-color: #fff4f6;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #fff;
+  padding: 2rem 1.5rem;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.05);
+  border-right: 1px solid #ffdce4;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.collapsed .sidebar {
+  width: 60px;
+  padding: 1rem 0.5rem;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 2rem;
+  color: #ff5c70;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.collapsed .sidebar h2 {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #ffe0e7;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  user-select: none;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 0.75rem 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff0f3;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+  background-color: #ff5c70;
+  color: white;
+}
+
+.collapsed .sidebar li {
+  text-align: center;
+  padding: 0.6rem;
+  font-size: 0;
+}
+
+/* Main content */
+.profile-content {
+  flex: 1;
+  padding: 3rem 4rem;
+  overflow-y: auto;
+  background-color: #fff4f6;
+}
+
+/* Card layout */
+.card {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.card h2 {
+  font-size: 26px;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: left;
+}
+
+.profile-form,
+.password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.85rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff5c70;
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #ff5c70;
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #e0485f;
+}
+
+.loading {
+  padding: 4rem;
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    border-right: none;
+    border-bottom: 1px solid #ffdce4;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+
+  .sidebar ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .sidebar li {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .profile-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}

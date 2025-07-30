@@ -1,0 +1,82 @@
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #ffe3ea;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(255, 77, 109, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(255, 77, 109, 0.15);
+}
+
+/* Image container */
+.service-image img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-bottom: 1px solid #ffe0e7;
+}
+
+/* Content container */
+.service-info {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Title */
+.service-info h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Description */
+.service-info p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Book button */
+.book-btn {
+  margin-top: auto;
+  background: linear-gradient(to right, #ff4d6d, #ff7e8f);
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  align-self: start;
+}
+
+.book-btn:hover {
+  background: linear-gradient(to right, #e94462, #ff647f);
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column;
+  }
+
+  .service-image img {
+    height: 160px;
+  }
+
+  .book-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

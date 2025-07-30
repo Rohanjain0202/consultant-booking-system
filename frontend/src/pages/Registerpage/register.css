@@ -1,0 +1,234 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #ffeef2, #fffafc);
+  overflow-x: hidden;
+}
+
+/* Layout Container */
+.register-page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: row;
+  animation: fadeInPage 0.8s ease-in-out;
+}
+
+/* Left Section */
+.register-left {
+  flex: 1.2;
+  background: linear-gradient(to bottom right, #f9bec7, #ffd6e0);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  text-align: center;
+  animation: fadeInLeft 1.2s ease;
+}
+
+.register-left-content h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.register-left-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 80%;
+  color: #444;
+}
+
+.register-image {
+  margin-top: 2rem;
+  width: 320px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Section */
+.register-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Card / Form Container */
+.register-container {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  animation: slideUp 0.9s ease;
+}
+
+.register-container h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1.8rem;
+  color: #222;
+  font-weight: 700;
+}
+
+/* Form Inputs */
+.register-container input,
+.register-container select {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  transition: 0.3s ease;
+  background-color: #fff;
+}
+
+.register-container input:focus,
+.register-container select:focus {
+  border-color: #ff4d6d;
+  background-color: #fff0f3;
+  box-shadow: 0 0 8px rgba(255, 77, 109, 0.3);
+  outline: none;
+}
+
+/* Button */
+.register-container button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #ff4d6d, #ff6f91);
+  color: white;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 18px rgba(255, 77, 109, 0.25);
+}
+
+.register-container button:hover {
+  background: linear-gradient(135deg, #ff3b5c, #ff5e80);
+  transform: translateY(-1px);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.footer a {
+  color: #ff4d6d;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .register-page {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .register-left,
+  .register-right {
+    width: 100%;
+  }
+
+  .register-left-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .register-left-content p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .register-container {
+    margin: 2rem auto;
+    width: 95%;
+  }
+
+  .register-image {
+    margin-top: 1.5rem;
+    width: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .register-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .register-left-content h1 {
+    font-size: 2rem;
+  }
+
+  .register-left-content p {
+    font-size: 0.95rem;
+  }
+
+  .register-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .register-image {
+    width: 220px;
+  }
+}

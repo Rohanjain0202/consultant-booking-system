@@ -1,0 +1,185 @@
+.consultant-dashboard {
+  display: flex;
+  flex-direction: row;
+  max-width:1800px;
+  gap: 2rem;
+  background-color: #fff4f6;
+  min-height: 100vh;
+  margin-top: 280px;
+  height: 1000px;
+}
+
+/* === Sidebar === */
+.sidebar {
+  width: 275px;
+  background-color: #ffe4e9;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1e293b;
+  text-align: center;
+}
+
+.sidebar button,
+.sidebar .tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #1e293b;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar .tab:hover {
+  background-color: #f43f5e;
+  color: white;
+}
+
+.sidebar .tab.active {
+  background-color: #f43f5e;
+  color: white;
+}
+
+.consultant-content{
+  width: 1200px;
+  margin-top: 50px;
+}
+.content-area {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* === Profile Card === */
+.profile-card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 700px;
+}
+
+.profile-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* === Form Styling === */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: #f9fafb;
+  transition: border 0.2s ease-in-out;
+}
+
+.form-group input:focus {
+  border-color: #3b82f6;
+  outline: none;
+  background-color: #fff;
+}
+
+.profile-card button {
+  width: 100%;
+  padding: 14px;
+  background-color: #f43f5e;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.profile-card button:hover {
+  background-color: #e11d48;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .consultant-dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 0;
+  }
+
+  .content-area {
+    padding: 30px 20px;
+  }
+
+  .profile-card {
+    padding: 30px 20px;
+  }
+}
+
+
+.review-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.review-form textarea {
+  padding: 0.5rem;
+  min-height: 80px;
+}
+
+.review-form select,
+.review-form button {
+  padding: 0.4rem;
+  width: fit-content;
+}
+
+.review-list {
+  margin-top: 1rem;
+}
+
+.review-item {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  background: #f9f9f9;
+}

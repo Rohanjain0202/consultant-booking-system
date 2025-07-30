@@ -1,0 +1,82 @@
+/* Reset base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #fff4f7;
+}
+
+/* Container */
+.booking-container {
+  background-color: white;
+  max-width: 500px;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+.booking-container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ff5c70;
+}
+
+/* Form styles */
+.booking-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Input and select */
+.booking-container input,
+.booking-container select {
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.booking-container input:focus,
+.booking-container select:focus {
+  border-color: #ff7b89;
+  background-color: #fff0f2;
+  outline: none;
+}
+
+/* Button */
+.booking-container button {
+  padding: 1rem;
+  background-color: #ff5c70;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.booking-container button:hover {
+  background-color: #e54860;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .booking-container {
+    margin: 2rem 1rem;
+    padding: 2rem 1.2rem;
+  }
+
+  .booking-container h2 {
+    font-size: 1.6rem;
+  }
+}
